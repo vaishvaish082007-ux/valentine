@@ -17,26 +17,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between rows */
+    gap: 8px; /* Space between rows */
     animation: heartbeat 1.5s ease-in-out infinite;
 }
 
 .heart img {
-    width: 100px; /* Adjust this size to make the heart bigger or smaller */
-    height: 100px;
+    width: 85px; /* Adjust this size to fit your screen perfectly */
+    height: 85px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Space between images in each row */
+    gap: 8px; /* Space between images in a row */
 }
 
 @keyframes heartbeat {
     0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    50% { transform: scale(1.03); }
     100% { transform: scale(1); }
 }
 </style>
@@ -44,7 +44,7 @@
 
 <body>
 
- <div class="heart">
+<div class="heart">
     <div class="row">
         <img src="pic1.jpg">
         <img src="pic2.jpg">
@@ -72,6 +72,7 @@
 
 </body>
 </html>
+
 
 
 
