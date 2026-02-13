@@ -10,37 +10,40 @@
         font-family: Arial, sans-serif;
     }
 
-.staggered-row {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* This gap pushes the two images apart to sit over the centers below */
-    margin-bottom: 10px;
-}
-
 .heart {
-    width: 100%;
+    width: 95vw;
+    max-width: 600px;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px; /* Space between rows */
     animation: heartbeat 1.5s ease-in-out infinite;
 }
 
 .heart img {
-    width: 100px;
+    width: 100px; /* Adjust size if they are too big/small */
     height: 100px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    gap: 8px; /* Space between images in a row */
+    gap: 10px; /* Normal gap for most rows */
+}
+
+/* This is the magic part for the top row */
+.top-row {
+    display: flex;
+    justify-content: center;
+    gap: 120px; /* A wider gap to push the top 2 images over the centers of the 4 below */
 }
 
 @keyframes heartbeat {
     0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
+    50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
 </style>
@@ -49,19 +52,19 @@
 <body>
 
 <div class="heart">
-    <div class="staggered-row">
+    <div class="top-row">
         <img src="pic1.jpg">
         <img src="pic2.jpg">
     </div>
 
-    <div class="row" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <div class="row">
         <img src="pic3.jpg">
         <img src="pic4.jpg">
         <img src="pic5.jpg">
         <img src="pic6.jpg">
     </div>
 
-    <div class="row" style="display: flex; gap: 10px; margin-bottom: 10px;">
+    <div class="row">
         <img src="pic7.jpg">
         <img src="pic8.jpg">
         <img src="pic9.jpg">
@@ -76,6 +79,7 @@
 
 </body>
 </html>
+
 
 
 
