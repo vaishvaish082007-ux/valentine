@@ -11,23 +11,21 @@
     }
 
     .heart {
-        width: 90vw;
-        max-width: 500px;
-        aspect-ratio: 500/450;
-        margin: 50px auto;
-        position: relative;
-        clip-path: polygon(50% 15%, 80% 0%, 100% 20%, 100% 50%, 50% 100%, 0% 50%, 0% 20%, 20% 0%);
-        transform-origin: center;
-        display: flex;
-        flex-wrap: wrap;
-        overflow: hidden;
-    }
+    display: grid;
+    /* Create 4 columns */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    width: 95vw;
+    max-width: 600px;
+    margin: 50px auto;
+}
 
-    .heart img {
-        width: 33.33%;
-        height: 33.33%;
-        object-fit: cover;
-    }
+.heart img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps them as perfect squares */
+    object-fit: cover;
+    border-radius: 5px; /* Optional: slightly rounded corners */
+}
 
     .text {
         margin-top: 30px;
@@ -40,21 +38,33 @@
 
 <body>
 
-    <div class="heart">
-        <img src="pic1.jpg">
-        <img src="pic2.jpg">
-        <img src="pic3.jpg">
-        <img src="pic4.jpg">
-        <img src="pic5.jpg">
-        <img src="pic6.jpg">
-        <img src="pic7.jpg">
-        <img src="pic8.jpg">
-        <img src="pic9.jpg">
+   <div class="heart">
+    <div></div> 
+    <img src="pic1.jpg">
+    <img src="pic2.jpg">
+    <div></div>
+
+    <img src="pic3.jpg">
+    <img src="pic4.jpg">
+    <img src="pic5.jpg">
+    <img src="pic6.jpg">
+
+    <div></div>
+    <img src="pic7.jpg">
+    <img src="pic8.jpg">
+    <div></div>
+
+    <div></div>
+    <div style="grid-column: span 2;">
+        <img src="pic9.jpg" style="width: 50%; margin: 0 auto; display: block;">
     </div>
+    <div></div>
+</div>
 
     <div class="text">I LOVE U 4EVER ACHUUU ❤️</div>
 
 </body>
 </html>
+
 
 
