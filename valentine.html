@@ -10,21 +10,28 @@
         font-family: Arial, sans-serif;
     }
 
- .heart {
-    display: grid;
-    /* This creates a grid with 5 columns */
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 8px;
+.heart {
     width: 95vw;
-    max-width: 550px;
+    max-width: 600px;
     margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between rows */
+    animation: heartbeat 1.5s ease-in-out infinite;
 }
 
 .heart img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Keeps photos as perfect squares */
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 8px; /* Nice rounded corners */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between images in a row */
 }
 
     .text {
@@ -45,20 +52,35 @@
 
 <body>
 
-   <div class="heart">
-    <div></div> <img src="pic1.jpg"> <div></div> <img src="pic2.jpg"> <div></div>
+  <div class="heart">
+    <div class="row">
+        <img src="pic1.jpg">
+        <img src="pic2.jpg">
+    </div>
 
-    <img src="pic3.jpg"> <img src="pic4.jpg"> <img src="pic5.jpg"> <img src="pic6.jpg"> <img src="pic7.jpg">
+    <div class="row">
+        <img src="pic3.jpg">
+        <img src="pic4.jpg">
+        <img src="pic5.jpg">
+        <img src="pic6.jpg">
+    </div>
 
-    <div></div> <img src="pic8.jpg"> <img src="pic9.jpg"> <img src="pic10.jpg"> <div></div>
+    <div class="row">
+        <img src="pic7.jpg">
+        <img src="pic8.jpg">
+        <img src="pic9.jpg">
+    </div>
 
-    <div></div> <div></div> <img src="pic11.jpg"> <div></div> <div></div>
+    <div class="row">
+        <img src="pic10.jpg">
+    </div>
 </div>
 
     <div class="text">I LOVE U 4EVER ACHUUU ❤️</div>
 
 </body>
 </html>
+
 
 
 
