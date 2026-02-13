@@ -10,22 +10,26 @@
         font-family: Arial, sans-serif;
     }
 
+.staggered-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* This gap pushes the two images apart to sit over the centers below */
+    margin-bottom: 10px;
+}
+
 .heart {
-    width: 95vw;
-    max-width: 600px;
-    margin: 40px auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px; /* Space between rows */
     animation: heartbeat 1.5s ease-in-out infinite;
 }
 
 .heart img {
-    width: 85px; /* Adjust this size to fit your screen perfectly */
-    height: 85px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .row {
@@ -45,19 +49,19 @@
 <body>
 
 <div class="heart">
-    <div class="row">
+    <div class="staggered-row">
         <img src="pic1.jpg">
         <img src="pic2.jpg">
     </div>
 
-    <div class="row">
+    <div class="row" style="display: flex; gap: 10px; margin-bottom: 10px;">
         <img src="pic3.jpg">
         <img src="pic4.jpg">
         <img src="pic5.jpg">
         <img src="pic6.jpg">
     </div>
 
-    <div class="row">
+    <div class="row" style="display: flex; gap: 10px; margin-bottom: 10px;">
         <img src="pic7.jpg">
         <img src="pic8.jpg">
         <img src="pic9.jpg">
@@ -72,6 +76,7 @@
 
 </body>
 </html>
+
 
 
 
