@@ -10,22 +10,21 @@
         font-family: Arial, sans-serif;
     }
 
-  .heart {
-    width: 90vw;
-    max-width: 500px;
-    aspect-ratio: 1/1;
-    margin: 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-    /* This cuts the WHOLE group into a heart, not each photo */
-    clip-path: polygon(50% 15%, 80% 0%, 100% 20%, 100% 50%, 50% 100%, 0% 50%, 0% 20%, 20% 0%);
-    gap: 2px; /* Small gap to see the individual photos */
+ .heart {
+    display: grid;
+    /* This creates a grid with 5 columns */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 8px;
+    width: 95vw;
+    max-width: 550px;
+    margin: 40px auto;
 }
 
 .heart img {
-    width: calc(33.33% - 2px); /* 3 images per row */
-    height: calc(33.33% - 2px);
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps photos as perfect squares */
     object-fit: cover;
+    border-radius: 4px;
 }
 
     .text {
@@ -54,12 +53,13 @@
     <div></div> <img src="pic8.jpg"> <img src="pic9.jpg"> <img src="pic10.jpg"> <div></div>
 
     <div></div> <div></div> <img src="pic11.jpg"> <div></div> <div></div>
-   </div>
+</div>
 
     <div class="text">I LOVE U 4EVER ACHUUU ❤️</div>
 
 </body>
 </html>
+
 
 
 
